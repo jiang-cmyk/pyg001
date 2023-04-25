@@ -1,0 +1,7 @@
+2023-04-21 17:12:34,002 - testrun_21_04_2023_17:12:34 - [INFO] - {'name': 'testrun_21_04_2023_17:12:34', 'dataset': 'JF17k', 'model': 'Node2vec', 'batch_size': 128, 'gpu': '0', 'max_epochs': 5, 'lr': 0.01, 'embedding_dim': 128, 'walk_length': 20, 'context_size': 10, 'walks_per_node': 10, 'num_negative_samples': 1, 'p': 1, 'q': 1, 'num_workers': 2, 'restore': False, 'log_dir': './log/', 'config_dir': './config/'}
+2023-04-21 17:12:37,382 - testrun_21_04_2023_17:12:34 - [INFO] - Epoch: 00, Loss: 5.2211, Val AUC: 0.5215, Val F1: 0.5136
+2023-04-21 17:12:39,010 - testrun_21_04_2023_17:12:34 - [INFO] - Epoch: 01, Loss: 3.7432, Val AUC: 0.5348, Val F1: 0.5275
+2023-04-21 17:12:40,641 - testrun_21_04_2023_17:12:34 - [INFO] - Epoch: 02, Loss: 2.6986, Val AUC: 0.5459, Val F1: 0.5364
+2023-04-21 17:12:42,276 - testrun_21_04_2023_17:12:34 - [INFO] - Epoch: 03, Loss: 1.9984, Val AUC: 0.5578, Val F1: 0.5435
+2023-04-21 17:12:43,911 - testrun_21_04_2023_17:12:34 - [INFO] - Epoch: 04, Loss: 1.5416, Val AUC: 0.5713, Val F1: 0.5510
+2023-04-21 17:12:43,919 - testrun_21_04_2023_17:12:34 - [INFO] - Test AUC: 0.5642, Test F1: 0.5467

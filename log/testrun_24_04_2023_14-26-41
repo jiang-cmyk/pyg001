@@ -1,0 +1,9 @@
+2023-04-24 14:26:41,349 - testrun_24_04_2023_14:26:41 - [INFO] - {'name': 'testrun_24_04_2023_14:26:41', 'dataset': 'humans_wikidata', 'model': 'Node2vec', 'batch_size': 128, 'gpu': '0', 'max_epochs': 100, 'lr': 0.01, 'embedding_dim': 128, 'walk_length': 20, 'context_size': 10, 'walks_per_node': 10, 'num_negative_samples': 1, 'p': 1, 'q': 1, 'num_workers': 2, 'restore': False, 'log_dir': './log/', 'config_dir': './config/'}
+2023-04-24 14:26:43,542 - testrun_24_04_2023_14:26:41 - [INFO] - train_data: 
+2023-04-24 14:26:43,542 - testrun_24_04_2023_14:26:41 - [INFO] - Data(edge_type=[83484], edge_label=[83484], edge_label_index=[2, 83484], edge_index=[2, 132914], num_nodes=38949)
+2023-04-24 14:26:43,543 - testrun_24_04_2023_14:26:41 - [INFO] - test data: 
+2023-04-24 14:26:43,543 - testrun_24_04_2023_14:26:41 - [INFO] - Data(edge_type=[49430], edge_label=[41121], edge_label_index=[2, 49430], edge_index=[2, 41121], num_nodes=38949)
+2023-04-24 14:26:43,543 - testrun_24_04_2023_14:26:41 - [INFO] - val data: 
+2023-04-24 14:26:43,543 - testrun_24_04_2023_14:26:41 - [INFO] - Data(edge_type=[49430], edge_label=[41148], edge_label_index=[2, 49430], edge_index=[2, 41148], num_nodes=38949)
+2023-04-24 14:26:58,092 - testrun_24_04_2023_14:26:41 - [INFO] - Epoch: 00, Loss: 4.2216, Val AUC: 0.5022, Val F1: 0.4890
+2023-04-24 14:27:10,655 - testrun_24_04_2023_14:26:41 - [INFO] - Epoch: 01, Loss: 2.0776, Val AUC: 0.5071, Val F1: 0.4967

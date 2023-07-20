@@ -1,0 +1,12 @@
+2023-07-18 10:02:14,395 - testrun_18_07_2023_10:02:14 - [INFO] - {'name': 'testrun_18_07_2023_10:02:14', 'dataset': 'JF17k', 'model': 'Node2vec', 'batch_size': 128, 'gpu': '0', 'max_epochs': 100, 'lr': 0.01, 'embedding_dim': 128, 'walk_length': 20, 'context_size': 10, 'walks_per_node': 10, 'num_negative_samples': 1, 'p': 1, 'q': 1, 'num_workers': 2, 'restore': False, 'log_dir': './log/', 'config_dir': './config/'}
+2023-07-18 10:02:15,069 - testrun_18_07_2023_10:02:14 - [INFO] - train_data: 
+2023-07-18 10:02:15,069 - testrun_18_07_2023_10:02:14 - [INFO] - Data(edge_type=[12519], edge_label=[12519], edge_label_index=[2, 12519], num_nodes=9233)
+2023-07-18 10:02:15,070 - testrun_18_07_2023_10:02:14 - [INFO] - test data: 
+2023-07-18 10:02:15,070 - testrun_18_07_2023_10:02:14 - [INFO] - Data(edge_type=[13646], edge_label=[11918], edge_label_index=[2, 13646], num_nodes=9233, edge_index=[2, 11918])
+2023-07-18 10:02:15,070 - testrun_18_07_2023_10:02:14 - [INFO] - val data: 
+2023-07-18 10:02:15,070 - testrun_18_07_2023_10:02:14 - [INFO] - Data(edge_type=[13646], edge_label=[11884], edge_label_index=[2, 13646], num_nodes=9233, edge_index=[2, 11884])
+2023-07-18 10:02:18,020 - testrun_18_07_2023_10:02:14 - [INFO] - Epoch: 00, Loss: 403612.7436, Val AUC: 0.4956, Val F1: 0.4751
+2023-07-18 10:02:19,917 - testrun_18_07_2023_10:02:14 - [INFO] - Epoch: 01, Loss: 404160.4867, Val AUC: 0.4956, Val F1: 0.4751
+2023-07-18 10:02:21,744 - testrun_18_07_2023_10:02:14 - [INFO] - Epoch: 02, Loss: 404086.9545, Val AUC: 0.4956, Val F1: 0.4751
+2023-07-18 10:02:23,570 - testrun_18_07_2023_10:02:14 - [INFO] - Epoch: 03, Loss: 403883.0924, Val AUC: 0.4956, Val F1: 0.4751
+2023-07-18 10:02:25,406 - testrun_18_07_2023_10:02:14 - [INFO] - Epoch: 04, Loss: 404213.6728, Val AUC: 0.4956, Val F1: 0.4751

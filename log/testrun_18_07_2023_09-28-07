@@ -1,0 +1,22 @@
+2023-07-18 09:28:07,051 - testrun_18_07_2023_09:28:07 - [INFO] - {'name': 'testrun_18_07_2023_09:28:07', 'dataset': 'JF17k', 'model': 'Node2vec', 'batch_size': 1024, 'gpu': '0', 'max_epochs': 100, 'lr': 0.01, 'embedding_dim': 128, 'walk_length': 20, 'context_size': 10, 'walks_per_node': 10, 'num_negative_samples': 1, 'p': 1, 'q': 1, 'num_workers': 2, 'restore': False, 'log_dir': './log/', 'config_dir': './config/'}
+2023-07-18 09:28:07,710 - testrun_18_07_2023_09:28:07 - [INFO] - train_data: 
+2023-07-18 09:28:07,710 - testrun_18_07_2023_09:28:07 - [INFO] - Data(edge_type=[12519], edge_label=[12519], edge_label_index=[2, 12519], num_nodes=9233)
+2023-07-18 09:28:07,711 - testrun_18_07_2023_09:28:07 - [INFO] - test data: 
+2023-07-18 09:28:07,711 - testrun_18_07_2023_09:28:07 - [INFO] - Data(edge_type=[13646], edge_label=[11918], edge_label_index=[2, 13646], num_nodes=9233, edge_index=[2, 11918])
+2023-07-18 09:28:07,711 - testrun_18_07_2023_09:28:07 - [INFO] - val data: 
+2023-07-18 09:28:07,711 - testrun_18_07_2023_09:28:07 - [INFO] - Data(edge_type=[13646], edge_label=[11884], edge_label_index=[2, 13646], num_nodes=9233, edge_index=[2, 11884])
+2023-07-18 09:28:10,510 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 00, Loss: 5.8418, Val AUC: 0.5078, Val F1: 0.4873
+2023-07-18 09:28:11,740 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 01, Loss: 5.2399, Val AUC: 0.5128, Val F1: 0.4951
+2023-07-18 09:28:12,969 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 02, Loss: 4.7656, Val AUC: 0.5178, Val F1: 0.5028
+2023-07-18 09:28:14,201 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 03, Loss: 4.3350, Val AUC: 0.5224, Val F1: 0.5104
+2023-07-18 09:28:15,431 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 04, Loss: 3.9422, Val AUC: 0.5264, Val F1: 0.5144
+2023-07-18 09:28:16,656 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 05, Loss: 3.5729, Val AUC: 0.5299, Val F1: 0.5176
+2023-07-18 09:28:17,889 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 06, Loss: 3.2407, Val AUC: 0.5333, Val F1: 0.5208
+2023-07-18 09:28:19,122 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 07, Loss: 2.9343, Val AUC: 0.5368, Val F1: 0.5246
+2023-07-18 09:28:20,347 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 08, Loss: 2.6652, Val AUC: 0.5404, Val F1: 0.5288
+2023-07-18 09:28:21,580 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 09, Loss: 2.4279, Val AUC: 0.5437, Val F1: 0.5325
+2023-07-18 09:28:22,812 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 10, Loss: 2.2189, Val AUC: 0.5470, Val F1: 0.5347
+2023-07-18 09:28:24,060 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 11, Loss: 2.0308, Val AUC: 0.5503, Val F1: 0.5381
+2023-07-18 09:28:25,291 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 12, Loss: 1.8663, Val AUC: 0.5536, Val F1: 0.5390
+2023-07-18 09:28:26,518 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 13, Loss: 1.7244, Val AUC: 0.5570, Val F1: 0.5412
+2023-07-18 09:28:27,748 - testrun_18_07_2023_09:28:07 - [INFO] - Epoch: 14, Loss: 1.5970, Val AUC: 0.5603, Val F1: 0.5425

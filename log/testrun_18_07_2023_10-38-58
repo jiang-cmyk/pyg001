@@ -1,0 +1,7 @@
+2023-07-18 10:38:58,116 - testrun_18_07_2023_10:38:58 - [INFO] - {'name': 'testrun_18_07_2023_10:38:58', 'dataset': 'JF17k', 'model': 'Node2vec', 'batch_size': 128, 'gpu': '0', 'max_epochs': 100, 'lr': 0.01, 'embedding_dim': 128, 'walk_length': 20, 'context_size': 10, 'walks_per_node': 10, 'num_negative_samples': 1, 'p': 1, 'q': 1, 'num_workers': 2, 'restore': False, 'log_dir': './log/', 'config_dir': './config/'}
+2023-07-18 10:38:58,781 - testrun_18_07_2023_10:38:58 - [INFO] - train_data: 
+2023-07-18 10:38:58,781 - testrun_18_07_2023_10:38:58 - [INFO] - Data(edge_type=[12519], edge_label=[12519], edge_label_index=[2, 12519], num_nodes=9233)
+2023-07-18 10:38:58,782 - testrun_18_07_2023_10:38:58 - [INFO] - test data: 
+2023-07-18 10:38:58,782 - testrun_18_07_2023_10:38:58 - [INFO] - Data(edge_type=[13646], edge_label=[11918], edge_label_index=[2, 13646], num_nodes=9233, edge_index=[2, 11918])
+2023-07-18 10:38:58,782 - testrun_18_07_2023_10:38:58 - [INFO] - val data: 
+2023-07-18 10:38:58,782 - testrun_18_07_2023_10:38:58 - [INFO] - Data(edge_type=[13646], edge_label=[11884], edge_label_index=[2, 13646], num_nodes=9233, edge_index=[2, 11884])

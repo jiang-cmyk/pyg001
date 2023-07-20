@@ -11,8 +11,9 @@ from torch_geometric.nn import GCNConv
 from FB15k_237 import FB15k_237
 
 import torch_geometric.transforms as T
-
 from torch_geometric.nn import Node2Vec
+
+from apex import amp
 
 def main():
     

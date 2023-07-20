@@ -29,10 +29,14 @@ from FB15k_237 import  FB15k_237
 # # print(train_data['edge_index'][1].max())
 # # print(train_data['edge_type'].max())
 #
-a = torch.tensor([1,2,3], dtype=float)
+a = torch.tensor([1,2,3, 3 ,4, 5, 6], dtype=float)
+# print( torch.unique(a))
 b = torch.tensor([[0.8,0.1,0.1],
                   [0.2,0.4,0.4],
-                  [0.8,0.1,0.1]])
+                   [0.8,0.1,0.1]])
+e=torch.tensor([0, 1])
+b = b[:,e]
+print((b * b).sum(dim=-1))
 c = torch.arange(25).reshape((5, -1))
 # print(c)
 d = [True, False, True, False]
@@ -56,7 +60,7 @@ d = [True, False, True, False]
 
 from sklearn.metrics import roc_auc_score
 #
-print(roc_auc_score(a, b, multi_class='ovr'))
+# print(roc_auc_score(a, torch.softmax(b, dim=1), multi_class='ovo'))
 #
 # a = [1,0,0,1]
 # b = [0,1,2,1]
@@ -92,3 +96,6 @@ print(roc_auc_score(a, b, multi_class='ovr'))
 #
 # print(torch.softmax(b, dim=1))
 # print(torch.sigmoid(b))
+import torch
+print(torch.cuda.is_available())
+print(torch.__version__)

@@ -11,7 +11,7 @@ import torch
 from dataload import pred_triple
 
 from torch_geometric.nn import Node2Vec
-
+from apex import amp
 
 class Runner(object):
 
@@ -71,8 +71,10 @@ class Runner(object):
 
         self.load_data()
         self.model        = self.add_model(self.p.model)
-        self.optimizer    = self.add_optimizer()
-        self.loader       = self.get_loader()
+        # self.optimizer    = self.add_optimizer()
+        self.model, self.optimizer  = amp.initialize(self.model, self.add_optimizer(), 
+                                                     opt_level="O1")
+        self.loader                 = self.get_loader()
 
 
     def add_model(self, model):
@@ -145,7 +147,9 @@ class Runner(object):
         for pos_rw, neg_rw in self.loader:
             self.optimizer.zero_grad()
             loss = self.model.loss(pos_rw.to(self.device), neg_rw.to(self.device))
-            loss.backward()
+            # loss.backward()
+            with amp.scale_loss(loss, self.optimizer) as scaled_loss:
+                scaled_loss.backward()   # loss要这么用
             self.optimizer.step()
             total_loss += loss.item()
         return total_loss / len(self.loader)
@@ -182,13 +186,13 @@ if __name__ == '__main__':
     parser.add_argument('-epoch',        dest='max_epochs',     type=int,       default=100,      help='Number of epochs')
     # parser.add_argument('-l2',        type=float,             default=0.0,            help='L2 Regularization for Optimizer')
     parser.add_argument('-lr',        type=float,             default=0.01,            help='Starting Learning Rate')
-    parser.add_argument('-embedding_dim',   dest='embedding_dim',      default=128,    type=int,       help='embedding dim for node2vc')
-    parser.add_argument('-walk_length',   dest='walk_length',      default=20,    type=int,       help='walk length for node2vc')
-    parser.add_argument('-context_size',   dest='context_size',      default=10,    type=int,       help='walks_per_node for node2vc')
-    parser.add_argument('-walks_per_node',   dest='walks_per_node',      default=10,    type=int,       help='context size for node2vc')
-    parser.add_argument('-num_negative_samples',   dest='num_negative_samples',      default=1,    type=int,       help='num negative samples for node2vc')
-    parser.add_argument('-p',   dest='p',      default=1,    type=int,       help='p for node2vc')
-    parser.add_argument('-q',   dest='q',      default=1,    type=int,       help='q for node2vc')
+    parser.add_argument('-embedding_dim',   dest='embedding_dim',      default=128,    type=int,       help='embedding dim of node2vc')
+    parser.add_argument('-walk_length',   dest='walk_length',      default=20,    type=int,       help='walk length of node2vc')
+    parser.add_argument('-context_size',   dest='context_size',      default=10,    type=int,       help='walks_per_node of node2vc')
+    parser.add_argument('-walks_per_node',   dest='walks_per_node',      default=10,    type=int,       help='context size of node2vc')
+    parser.add_argument('-num_negative_samples',   dest='num_negative_samples',      default=1,    type=int,       help='num negative samples of node2vc')
+    parser.add_argument('-p',   dest='p',      default=1,    type=int,       help='p of node2vc')
+    parser.add_argument('-q',   dest='q',      default=1,    type=int,       help='q of node2vc')
     parser.add_argument('-num_workers',    type=int,               default=2,                     help='Number of processes to construct batches')
 
     parser.add_argument('-restore',         dest='restore',         action='store_true',            help='Restore from the previously saved model')
